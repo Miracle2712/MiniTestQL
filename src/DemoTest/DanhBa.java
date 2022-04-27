@@ -1,7 +1,7 @@
 package DemoTest;
 
 public class DanhBa {
-    private int phoneNumber;
+    private String phoneNumber;
     private String directory;
     private String name;
     private String gender;
@@ -11,7 +11,7 @@ public class DanhBa {
     public DanhBa() {
     }
 
-    public DanhBa(int phoneNumber, String directory, String name, String gender, String address) {
+    public DanhBa(String phoneNumber, String directory, String name, String gender, String address) {
         this.phoneNumber = phoneNumber;
         this.directory = directory;
         this.name = name;
@@ -20,11 +20,11 @@ public class DanhBa {
 
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

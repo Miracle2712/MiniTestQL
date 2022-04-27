@@ -7,7 +7,7 @@ public class ThongTinDanhBa extends DanhBa{
     public ThongTinDanhBa() {
     }
 
-    public ThongTinDanhBa(int phoneNumber, String directory, String name, String gender, String address, String birthDay, String email) {
+    public ThongTinDanhBa(String phoneNumber, String directory, String name, String gender, String address, String birthDay, String email) {
         super(phoneNumber, directory, name, gender, address);
         this.birthDay = birthDay;
         this.email = email;

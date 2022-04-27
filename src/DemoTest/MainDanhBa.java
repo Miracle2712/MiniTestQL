@@ -16,16 +16,18 @@ public class MainDanhBa {
                     "1. Thêm Danh Bạ\n" +
                     "2. Hiện thị thông tin người trong danh bạ.\n" +
                     "3. Sửa số điện thoại\n"+
-                    "4. Xóa số trong danh bạ\n"
+                    "4. Xóa số trong danh bạ\n"+
+                    "5. Tìm số trong danh bạ"
 
             );
             choice= scanner.nextInt();
             switch (choice) {
                 case 1:
-                    System.out.println("Nhập sđt");
-                    int so = scanner.nextInt();
-
                     Scanner sc = new Scanner(System.in);
+                    System.out.println("Nhập sđt");
+                    String so = sc.nextLine();
+
+                    sc = new Scanner(System.in);
                     System.out.println("Nhập nhóm danh bạ");
                     String nhom = sc.nextLine();
 
@@ -49,24 +51,25 @@ public class MainDanhBa {
                     quanLyDanhBa.display();
                     break;
                 case 3:
-                    Scanner sc1 = new Scanner(System.in);
+                    sc = new Scanner(System.in);
                     System.out.println("số cần sửa");
-                    int sdt = sc1.nextInt();
+                    String sdt = sc.nextLine();
 
+                    sc = new Scanner(System.in);
                     System.out.println("Nhập sđt");
-                    so = scanner.nextInt();
+                    so = sc.nextLine();
 
                     sc = new Scanner(System.in);
                     System.out.println("Nhập nhóm danh bạ");
                     nhom = sc.nextLine();
 
-                     sc= new Scanner(System.in);
+                    sc= new Scanner(System.in);
                     System.out.println("Nhập tên ");
-                     ten = sc.nextLine();
+                    ten = sc.nextLine();
 
-                     sc= new Scanner(System.in);
+                    sc= new Scanner(System.in);
                     System.out.println("Nhập giới tính ");
-                     gioiTinh = sc.nextLine();
+                    gioiTinh = sc.nextLine();
 
                     sc= new Scanner(System.in);
                     System.out.println("NHập địa chỉ");
@@ -76,11 +79,17 @@ public class MainDanhBa {
                     break;
 
                 case 4:
-                    sc1 = new Scanner(System.in);
+                    sc = new Scanner(System.in);
                     System.out.println("số cần xóa");
-                    int xoa = sc1.nextInt();
+                    String xoa = sc.nextLine();
                     quanLyDanhBa.delete(xoa);
                     break;
+
+                case 5:
+                    sc = new Scanner(System.in);
+                    System.out.println("số cần tìm");
+                    String timSo = sc.nextLine();
+                    quanLyDanhBa.findByPhoneNumber(timSo);
             }
         }
     }

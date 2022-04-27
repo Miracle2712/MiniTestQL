@@ -24,16 +24,16 @@ public class QuanLyDanhBa implements QuanLyy<DanhBa> {
 
 
     @Override
-    public void edit(int phoneNumber, DanhBa danhBa) {
+    public void edit(String phoneNumber, DanhBa danhBa) {
         for (int i = 0; i < danhBaList.size(); i++) {
-            if (danhBaList.get(i).getPhoneNumber() == phoneNumber) {
+            if (danhBaList.get(i).getPhoneNumber().equals(phoneNumber)) {
                 danhBaList.set(i, danhBa);
             }
         }
     }
 
     @Override
-    public void delete(int phoneNumber) {
+    public void delete(String phoneNumber) {
         if (findByPhoneNumber(phoneNumber) != -1) {
             danhBaList.remove(findByPhoneNumber(phoneNumber));
         } else {
@@ -42,14 +42,16 @@ public class QuanLyDanhBa implements QuanLyy<DanhBa> {
     }
 
     @Override
-    public int findByPhoneNumber(int phoneNumber) {
+    public int findByPhoneNumber(String phoneNumber) {
         for (int i = 0; i < danhBaList.size(); i++) {
-            if (danhBaList.get(i).getPhoneNumber() == phoneNumber) {
+            if (danhBaList.get(i).getPhoneNumber().equals(phoneNumber)) {
                 System.out.println(danhBaList.get(i));
                 return i;
             }
         }
+        System.out.println("không có trong danh bạ");
         return -1;
     }
 }
+
 

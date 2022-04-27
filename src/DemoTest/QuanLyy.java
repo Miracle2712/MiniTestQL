@@ -6,11 +6,11 @@ public interface QuanLyy<T> {
     void display();
 
 
-    void edit(int phoneNumber, T t);
+    void edit(String phoneNumber, T t);
 
 
-    void delete(int phoneNumber);
+    void delete(String phoneNumber);
 
 
-    int findByPhoneNumber(int phoneNumber);
+    int findByPhoneNumber(String phoneNumber);
 }
